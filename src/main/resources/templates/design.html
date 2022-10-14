@@ -17,25 +17,25 @@
   <div class="grid">
     <div class="doctors-group" id="aminas">
       <h3>Dentist: Amina Zhenisova</h3>
-      <div th:each="ingredient : ${amina}">
-        <input th:field="*{doctors}" type="checkbox" th:value="${ingredient.id}"/>
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+      <div th:each="doctors : ${amina}">
+        <input th:field="*{doctors}" type="checkbox" th:value="${doctors.id}"/>
+        <span th:text="${doctors.name}">DOCTORS</span><br/> </div>
     </div>
     <div class="doctors-group" id="bayans">
       <h3>Ophthalmologist: Bayan Buitek</h3>
-      <div th:each="ingredient : ${bayan}">
-        <input th:field="*{doctors}" type="checkbox" th:value="${ingredient.id}"/>
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+      <div th:each="doctors : ${bayan}">
+        <input th:field="*{doctors}" type="checkbox" th:value="${doctors.id}"/>
+        <span th:text="${doctors.name}">DOCTORS</span><br/> </div>
     </div>
     <div class="doctors-group" id="timurs">
       <h3>Therapist: Timur Merekeyev</h3>
-      <div th:each="ingredient : ${timur}">
-        <input th:field="*{doctors}" type="checkbox" th:value="${ingredient.id}"/>
-        <span th:text="${ingredient.name}">INGREDIENT</span><br/> </div>
+      <div th:each="doctors : ${timur}">
+        <input th:field="*{doctors}" type="checkbox" th:value="${doctors.id}"/>
+        <span th:text="${doctors.name}">DOCTORS</span><br/> </div>
     </div>
   </div>
   <div>
-    <h3>Please write your full name:</h3>
+    <h3>Please write what is bothering you:</h3>
     <input type="text" th:field="*{name}"/>
     <br/>
     <button>Make an appointment</button>

@@ -8,14 +8,10 @@ import java.util.List;
 @Data
 public class OmisDoctors {
 
-    private String deliveryName;
-    private String deliveryStreet;
-    private String deliveryCity;
-    private String deliveryState;
-    private String deliveryZip;
-    private String ccNumber;
-    private String ccExpiration;
-    private String ccCVV;
+    private String firstName;
+    private String secondName;
+    private String middleName;
+    private String dateOfBirth;
     private List<Omis> appdoctors = new ArrayList<>();
     public void addOmis(Omis omiss) {
         this.appdoctors.add(omiss);

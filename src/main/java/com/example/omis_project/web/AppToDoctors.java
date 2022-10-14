@@ -11,9 +11,10 @@ import org.springframework.web.bind.support.SessionStatus;
 
 @Slf4j
 @Controller
-@RequestMapping("/orders")
+@RequestMapping("/apptodoctor")
+//orders
 @SessionAttributes("omisDoctors")
-public class OrderController {
+public class AppToDoctors {
     @GetMapping("/current")
     public String orderForm() {
         return "orderForm";

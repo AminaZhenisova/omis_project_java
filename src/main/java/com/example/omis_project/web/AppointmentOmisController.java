@@ -18,7 +18,7 @@ import com.example.omis_project.Omis;
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("omisDoctors")
-public class DesignOmisController {
+public class AppointmentOmisController {
     @ModelAttribute
     public void addDoctorsToModel(Model model) {
         List<Doctors> doctors = Arrays.asList(
@@ -48,7 +48,7 @@ public class DesignOmisController {
         return new Omis();
     }
     @GetMapping
-    public String showDesignForm() {
+    public String showAppointmentForm() {
         return "design";
     }
 
@@ -57,7 +57,7 @@ public class DesignOmisController {
                               @ModelAttribute OmisDoctors omisDoctors) {
         omisDoctors.addOmis(omiss);
         log.info("Processing omiss: {}", omiss);
-        return "redirect:/orders/current";
+        return "redirect:/apptodoctor/current";
     }
 
     private Iterable<Doctors> filterByType(
