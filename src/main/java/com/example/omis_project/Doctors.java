@@ -3,11 +3,11 @@ package com.example.omis_project;
 import lombok.Data;
 
 @Data
-public class Ingredient {
+public class Doctors {
     private final String id;
     private final String name;
     private final Type type;
     public enum Type {
-        WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
+        AMINA, BAYAN, TIMUR
     }
 }

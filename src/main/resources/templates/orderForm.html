@@ -2,16 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Taco Cloud</title>
-    <link rel="stylesheet" th:href="@{/styles.css}" />
+    <title>OMIS</title>
 </head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+</style>
 <body>
 <form method="POST" th:action="@{/orders}" th:object="${omisDoctors}"> <h1>Order your taco creations!</h1>
     <img th:src="@{/omis.jpg}"/>
     <h3>Your tacos in this order:</h3>
     <a th:href="@{/design}" id="another">Design another taco</a><br/> <ul>
-        <li th:each="taco : ${omisDoctors.tacos}">
-            <span th:text="${taco.name}">taco name</span></li>
+        <li th:each="omiss : ${omisDoctors.appdoctors}">
+            <span th:text="${omiss.name}">taco name</span></li>
     </ul>
     <h3>Deliver my taco masterpieces to...</h3>
     <label for="deliveryName">Name: </label>

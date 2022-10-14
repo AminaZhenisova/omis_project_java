@@ -16,8 +16,8 @@ public class OmisDoctors {
     private String ccNumber;
     private String ccExpiration;
     private String ccCVV;
-    private List<Omis> tacos = new ArrayList<>();
-    public void addOmis(Omis taco) {
-        this.tacos.add(taco);
+    private List<Omis> appdoctors = new ArrayList<>();
+    public void addOmis(Omis omiss) {
+        this.appdoctors.add(omiss);
     }
 }

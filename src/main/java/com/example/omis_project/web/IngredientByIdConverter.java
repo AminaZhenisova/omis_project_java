@@ -4,26 +4,27 @@ import java.util.HashMap;
 import java.util.Map;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import com.example.omis_project.Ingredient;
-import com.example.omis_project.Ingredient.Type;
+import com.example.omis_project.Doctors;
+import com.example.omis_project.Doctors.Type;
 
 @Component
-public class IngredientByIdConverter implements Converter<String, Ingredient> {
-    private Map<String, Ingredient> ingredientMap = new HashMap<>();
+public class IngredientByIdConverter implements Converter<String, Doctors> {
+    private Map<String, Doctors> ingredientMap = new HashMap<>();
     public IngredientByIdConverter() { ingredientMap.put("FLTO",
-            new Ingredient("FLTO", "Flour Tortilla", Type.WRAP)); ingredientMap.put("COTO",
-            new Ingredient("COTO", "Corn Tortilla", Type.WRAP)); ingredientMap.put("GRBF",
-            new Ingredient("GRBF", "Ground Beef", Type.PROTEIN)); ingredientMap.put("CARN",
-            new Ingredient("CARN", "Carnitas", Type.PROTEIN)); ingredientMap.put("TMTO",
-            new Ingredient("TMTO", "Diced Tomatoes", Type.VEGGIES)); ingredientMap.put("LETC",
-            new Ingredient("LETC", "Lettuce", Type.VEGGIES)); ingredientMap.put("CHED",
-            new Ingredient("CHED", "Cheddar", Type.CHEESE)); ingredientMap.put("JACK",
-            new Ingredient("JACK", "Monterrey Jack", Type.CHEESE)); ingredientMap.put("SLSA",
-            new Ingredient("SLSA", "Salsa", Type.SAUCE)); ingredientMap.put("SRCR",
-            new Ingredient("SRCR", "Sour Cream", Type.SAUCE));
+            new Doctors("FLTO", "13:00", Type.AMINA)); ingredientMap.put("COTO",
+            new Doctors("COTO", "15:30", Type.AMINA)); ingredientMap.put("GRBF",
+            new Doctors("GRBF", "16:00", Type.AMINA)); ingredientMap.put("CARN",
+            new Doctors("CARN", "11:15", Type.BAYAN)); ingredientMap.put("TMTO",
+            new Doctors("TMTO", "12:00", Type.BAYAN)); ingredientMap.put("LETC",
+            new Doctors("LETC", "13:45", Type.BAYAN)); ingredientMap.put("CHED",
+            new Doctors("CHED", "14:30", Type.BAYAN)); ingredientMap.put("JACK",
+            new Doctors("JACK", "13:45", Type.TIMUR)); ingredientMap.put("SLSA",
+            new Doctors("SLSA", "15:00", Type.TIMUR)); ingredientMap.put("SRCR",
+            new Doctors("SRCR", "17:15", Type.TIMUR));
     }
+
     @Override
-    public Ingredient convert(String id) {
+    public Doctors convert(String id) {
         return ingredientMap.get(id); }
 }
 

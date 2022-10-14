@@ -7,5 +7,5 @@ import java.util.List;
 @Data
 public class Omis {
     private String name;
-    private List<Ingredient> ingredients;
+    private List<Doctors> doctors;
 }
